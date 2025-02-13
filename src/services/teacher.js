@@ -5,7 +5,6 @@ const { successRes } = require('../responce/retuen');
 const { hashSalt, teacherTokenExpireTime } = require('../utils/default');
 const bcrypt = require('bcrypt');
 const adminModel = require('../model/admin');
-const { generateEtag } = require('../utils/Etag');
 
 const registerTeacherService = async ({
   name,

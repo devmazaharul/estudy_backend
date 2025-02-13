@@ -1,7 +1,7 @@
-const sendEmail = require("../config/mail");
+
 const { anyError } = require("../responce/error");
 const { registerAdmin, loginAdmin } = require("../services/admin");
-const { backend_site_url } = require("../utils/default");
+
 const {
   nameValidation,
   emailValidation,
@@ -75,15 +75,7 @@ const register = async (req, res, next) => {
         activationMsg: "send acctivation link please verify your email",
       });
 
-      //mail services
-
-      // await sendEmail({
-      //   email,
-      //   sub: "Account activation",
-      //   name,
-      //   activationLink:
-      //     backend_site_url + "/active-account/" + responce?.data.id,
-      // });
+    
     } else {
       res.status(responce.status).json(responce);
     }
